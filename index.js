@@ -1,13 +1,13 @@
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const app = express();
 
-const baseDir = './build';
+const baseDir = "./build";
 
-app.use(express.static(`${baseDir}`))
+app.use(express.static(`${baseDir}`));
 
-app.get('*', (req,res) => res.sendFile('index.html' , { root : baseDir }))
+app.get("*", (req, res) => res.sendFile("index.html", { root: baseDir }));
 
-const port = 4000
+const port = 4001;
 
-app.listen(port, () => console.log(`Running at http://localhost:${port}`))
+app.listen(port, () => console.log(`Running at http://localhost:${port}`));
